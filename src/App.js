@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Navbar from './components/Navbar';
+import ProductList from './components/ProductList';
+
+const productsData = [
+  { id: 1, name: 'Product 1', price: 19.99, image: 'product1.jpg' },
+  { id: 2, name: 'Product 2', price: 29.99, image: 'product2.jpg' },
+  // Add more products as needed
+];
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Navbar />
+      <ProductList products={productsData} />
     </div>
   );
 }
